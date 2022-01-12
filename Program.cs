@@ -10,24 +10,39 @@ namespace Calulator;
             Console.WriteLine("please enter the Number2");  
             int B = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Choose an option from the following list:");
-            Console.WriteLine("Ad");
-            Console.WriteLine("Sub");
-            Console.WriteLine("Mul");
-            Console.WriteLine("Div");
-            switch (Console.ReadLine())
+            Console.WriteLine("Addition --/ 1 ");    //Addition
+            Console.WriteLine("Subtraction --/ 2");   //Subtraction
+            Console.WriteLine("Multiplication --/ 3");   //Multiplication
+            Console.WriteLine("Division --/ 4");  //Division
+            Console.WriteLine("Square --/ 5");   //square
+            Console.WriteLine("Square root --/ 6");
+            Console.Write("Select one option -- ");
+            switch (Convert.ToInt32(Console.ReadLine()))
     {
-            case "Ad":
-                Console.WriteLine($"The result is:{Op.Add(A,B)}");
+            case 1:
+                Op.Addition(A,B);
                 break;
-            case "Sub":
-                Console.WriteLine($"The result is:{Op.Subtract(A,B)}");
+            case 2:
+                Op.Subtraction(A,B);
                 break;
-            case "Mul":
-                Console.WriteLine($"The Result is: {Op.Multiply(A,B)}");
+            case 3:
+                Op.Multiplication(A,B);
                 break;
-            case "Div":
-                Console.WriteLine($"The Result is: {Op.Division(A,B)}");
+            case 4:
+                Op.Division(A,B);
                 break;
+            case 5:
+                Op.Square(A);
+                Op.Square(B);
+                break;
+            case 6:
+                Op.SquareRoot(A);
+                Op.SquareRoot(B);
+                break;
+            default:
+                Console.WriteLine("Enter the proper Number");
+                break;
+
     }   
         }
     }
